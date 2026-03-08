@@ -170,7 +170,7 @@ public class FlutterAmazonpaymentservicesPlugin implements FlutterPlugin, Method
 
             if (fortCallback == null)
                 fortCallback = FortCallback.Factory.create();
-            FortSdk.getInstance().registerCallback(activity, fortRequest, mEnvironment.getSdkEnvironemt(), PAYFORT_REQUEST_CODE, fortCallback, true, new FortInterfaces.OnTnxProcessed() {
+            FortSdk.getInstance().registerCallback(activity, fortRequest, mEnvironment.getSdkEnvironemt(), PAYFORT_REQUEST_CODE, fortCallback, false, new FortInterfaces.OnTnxProcessed() {
                 @Override
                 public void onCancel(Map<String, Object> requestParamsMap, Map<String, Object> responseMap) {
                     result.error("onCancel", "onCancel", responseMap);

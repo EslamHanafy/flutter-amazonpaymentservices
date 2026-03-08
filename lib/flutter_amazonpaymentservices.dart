@@ -28,7 +28,7 @@ class FlutterAmazonpaymentservices {
     final LinkedHashMap<Object?, Object?> result =
         await _channel.invokeMethod("normalPay", {
       "isShowResponsePage": isShowResponsePage,
-      "environmentType": describeEnum(environmentType),
+      "environmentType": environmentType.name,
       "requestParam": request,
     });
     return result;
